@@ -1,1 +1,18 @@
-
+name: static deploy app
+on:
+  push:
+    branches:
+      - master
+jobs:
+    build:
+        name: ssh into vm
+        runs-on: ubuntu-latest
+        steps:
+        - name: use actions to ssh into vm
+          uses: appleboy/ssh-action@v0.1.0.10
+          with:
+            host: ${{ secrets.HOST  }}
+            username: ${{ secerets.USRNAME  }}
+            key_path: ${{ secrets.PASSWORD  }}
+            script: whoami
+            script
