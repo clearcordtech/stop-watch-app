@@ -15,4 +15,4 @@ jobs:
             username: ${{ secerets.USRNAME  }}
             key_path: ${{ secrets.PASSWORD  }}
             script: whoami
-            script
+    
