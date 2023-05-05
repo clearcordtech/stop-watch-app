@@ -13,6 +13,6 @@ jobs:
           with:
             host: ${{ secrets.HOST  }}
             username: ${{ secrets.USRNAME  }}
-            key_path: ${{ secrets.PASSWORD  }}
+            key: ${{ secrets.PASSWORD  }}
             script: whoami
     
