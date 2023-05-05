@@ -2,7 +2,7 @@ name: static deploy app
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
     build:
         name: ssh into vm
