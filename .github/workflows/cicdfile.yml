@@ -10,9 +10,10 @@ jobs:
         steps:
         - name: use actions to ssh into vm
           uses: appleboy/ssh-action@master
-          with:
+          with:            
             host: ${{ secrets.HOST  }}
             username: ${{ secrets.USRNAME  }}
-            key_path: ${{ secrets.PASSWORD  }}
+            key: ${{ secrets.PASSWORD  }}
+            port: ${{ secrets.PORT }}
             script: whoami
     
